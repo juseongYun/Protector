@@ -78,9 +78,9 @@ void loop() {
         QS = false;                      // reset the Quantified Self flag for next time    
   }
   int totalRead,length;
-  char buffer[40];
+  char buffer[5];
   if ((length = wifi.available()) > 0) {
-      totalRead = wifi.read(buffer, 40);
+      totalRead = wifi.read(buffer, 5);
 
       if (length > 0) {
         Serial.print("Received ");
