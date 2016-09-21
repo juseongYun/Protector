@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.protector"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <!-- 최저버전을 8로 설정해주어 낮은 버전의 안드로이드 기기를 사용하는 사람도 이 앱을 사용할 수 있도록 한다. -->
+
+    <uses-sdk
+        android:minSdkVersion="9"
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.VIBRATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.protector.Loading"
+            android:label="@string/app_name" >
+
+            <!-- 로딩화면을 넣어주기 위해 MainActivity 대신 Loading.java로 수정 Loading.java에서 MainActivity로 넘어가도록 코딩 -->
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 로딩화면(Loading.java)이 종료된 후 MainActivity가 실행되도록 등록한다. -->
+        <activity
+            android:name=".MyAlert"
+            android:theme="@android:style/Theme.Dialog" >
+        </activity>
+        <activity android:name=".ActivityMain" >
+        </activity>
+        <activity android:name=".Socket_Android" >
+        </activity>
+        <activity android:name=".CPU_1_1_1_Search" >
+        </activity>
+        <activity android:name=".CPU_1_1_2_ShowData" >
+        </activity>
+        <activity android:name=".CPU_1_1_3_ShowGraph" >
+        </activity>
+        <activity android:name=".CPU_1_1_4_ShowPhoto" >
+        </activity>
+        <activity android:name=".CPU_1_1_5_ShowAlram" >
+        </activity>
+        <activity android:name=".CPU_1_2_0_Login" >
+        </activity>
+        <activity android:name=".CPU_1_2_1_LoginUser" >
+        </activity>
+        <activity android:name=".CPU_1_2_2_LoginDoctor" >
+        </activity>
+        <activity android:name=".CPU_1_3_1_Join" >
+        </activity>
+        <activity android:name=".CPU_1_3_2_JoinUser" >
+        </activity>
+        <activity android:name=".CPU_1_3_3_JoinDoctor" >
+        </activity>
+        <activity android:name=".CPU_1_3_4_JoinSocial" >
+        </activity>
+        <activity android:name=".CPU_2_1_1_Maker" >
+        </activity>
+        <activity android:name=".CPU_2_1_2_Hello" >
+        </activity>
+        <activity android:name=".CPU_2_1_3_IntroduceProduct" >
+        </activity>
+        <activity android:name=".CPU_2_1_4_HowToUse" >
+        </activity>
+        <activity android:name=".CPU_2_2_1_Data" >
+        </activity>
+        <activity android:name=".CPU_2_2_1_Edit_Data" >
+        </activity>
+        <activity android:name=".CPU_2_2_2_Graph" >
+        </activity>
+        <activity android:name=".CPU_2_2_3_Photo" >
+        </activity>
+        <activity android:name=".CPU_2_2_4_Alram" >
+        </activity>
+        <activity android:name=".CPU_2_3_1_FAQ" >
+        </activity>
+        <activity android:name=".CPU_2_3_2_1TO1" >
+        </activity>
+        <activity android:name=".CPU_2_3_3_Notice" >
+        </activity>
+        <activity android:name=".CPU_3_1_1_Maker" >
+        </activity>
+        <activity android:name=".CPU_3_1_2_Hello" >
+        </activity>
+        <activity android:name=".CPU_3_1_3_IntroduceProduct" >
+        </activity>
+        <activity android:name=".CPU_3_1_4_HowToUse" >
+        </activity>
+        <activity android:name=".CPU_3_2_0_Add_Patient" >
+        </activity>
+        <activity android:name=".CPU_3_2_0_Patient_List" >
+        </activity>
+        <activity android:name=".CPU_3_2_1_Data_Personal" >
+        </activity>
+        <activity android:name=".CPU_3_2_1_Data" >
+        </activity>
+        <activity android:name=".CPU_3_2_2_Edit_Data_Doctor" >
+        </activity>
+        <activity android:name=".CPU_3_2_2_Edit_Data_Personal" >
+        </activity>
+        <activity android:name=".CPU_3_2_2_Edit_Data_Social" >
+        </activity>
+        <activity android:name=".CPU_3_2_3_Graph" >
+        </activity>
+        <activity android:name=".CPU_3_2_4_Photo" >
+        </activity>
+        <activity android:name=".CPU_3_2_5_Alram" >
+        </activity>
+        <activity android:name=".CPU_3_3_1_FAQ" >
+        </activity>
+        <activity android:name=".CPU_3_3_2_1TO1" >
+        </activity>
+        <activity android:name=".CPU_3_3_3_Notice" >
+        </activity>
+        <activity android:name=".Data" >
+        </activity>
+        <activity android:name=".Edit_Data" >
+        </activity>
+        <activity android:name=".Join" >
+        </activity>
+        <activity android:name=".URLReader" >
+        </activity>
+        <activity android:name=".MyAdapter" >
+        </activity>
+        <activity android:name=".MyData" >
+        </activity>
+    </application>
+
+</manifest>

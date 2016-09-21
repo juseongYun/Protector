@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Protector</string>
+    <string name="action_settings">Settings</string>
+    <string name="choice">선택</string>
+    
+    
+    <string name="string_user_id">%1$s 님, 반갑습니다.</string>
+    
+    <string name="bottom1">ⓒ 2016 CPU All Rights Reserved.</string>
+</resources>
