@@ -1,0 +1,85 @@
+body {
+	margin:0;
+}
+
+A:link {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+A:visited {
+	COLOR: #393939; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #393939; TEXT-DECORATION: none
+}
+TD {
+	FONT-SIZE: 8pt; LINE-HEIGHT: 15pt; FONT-FAMILY: Gulim
+}
+A.navigation:visited {
+	COLOR: #000000; TEXT-DECORATION: none; none: 
+}
+A.navigation:hover {
+	FONT-WEIGHT: bold; COLOR: #393939; TEXT-DECORATION: underline
+}
+A.navigation:active {
+	COLOR: #000000; none: 
+}
+A.navigation:link {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+A.navigat:visited {
+	COLOR: #c85102; TEXT-DECORATION: none; none: 
+}
+A.navigat:hover {
+	COLOR: #f8ba25; TEXT-DECORATION: underline
+}
+A.navigat:active {
+	COLOR: #c85102; TEXT-DECORATION: none
+}
+A.navigat:link {
+	COLOR: #c85102; TEXT-DECORATION: none
+}
+TD {
+	FONT-SIZE: 9pt
+}
+TD.Column {
+	WIDTH: 500px; BACKGROUND-COLOR: #aed6f3; TEXT-ALIGN: right
+}
+.Input {
+	MARGIN-LEFT: 0px; WIDTH: 100px
+}
+.Input01 {
+	MARGIN-LEFT: 5px; WIDTH: 250px
+}
+.Input02 {
+	MARGIN-LEFT: 5px; WIDTH: 350px
+}
+TABLE.Sheet {
+	BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 8pt; BORDER-BOTTOM-WIDTH: 0px; FONT-FAMILY: Arial; BORDER-RIGHT-WIDTH: 0px
+}
+TD.Head {
+	BORDER-RIGHT: white 0px solid; BORDER-TOP: white 0px solid; BORDER-LEFT: white 1px solid; COLOR: white; BORDER-BOTTOM: white 1px solid; BACKGROUND-COLOR: #a5a5a5
+}
+TD.Data {
+	BORDER-RIGHT: #a5a5a5 0px solid; BORDER-TOP: #a5a5a5 0px solid; BORDER-LEFT: #a5a5a5 1px solid; COLOR: black; BORDER-BOTTOM: #a5a5a5 1px solid; BACKGROUND-COLOR: white
+}
+TD.First {
+	BORDER-LEFT-WIDTH: 0px
+}
+TD.GrayData {
+	BACKGROUND-COLOR: #f4f4f4
+}
+TD.Center {
+	TEXT-ALIGN: center
+}
+.SubMenu {
+	HEIGHT: 20px
+}
+.menu {
+	FONT: 9pt/140% "굴림"; COLOR: #555555
+}
+.menu A {
+	FONT: 9pt/140% "굴림"; COLOR: #555555; TEXT-DECORATION: none
+}
+.menu A:hover {
+	FONT: bold 9pt/140% "굴림"; COLOR: #003399; TEXT-DECORATION: underline
+}
