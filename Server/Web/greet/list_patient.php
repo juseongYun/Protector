@@ -102,7 +102,7 @@ echo "total $total_patient total <br>";
 	  $sql2 = "select id,name from member where product_num='$product_num'";
 	  $result2 = mysql_query($sql2,$connect);
 	  $row2 = mysql_fetch_array($result2);
-	  ?><td><?=$row2[name]?></td><td><?=$row2[id]?></td><td><?=$product_num?></td><td><a href="patient_login.php?product_num=<?=$product_num?>" style="color:blue;">이동</a></td>
+	  ?><td><?=$row2[name]?></td><td><?=$row2[id]?></td><td><?=$product_num?></td><td><a href="patient_login.php?product_num=<?=$product_num?>" style="color:blue;">선택</a></td>
 	  <td><a href=# onclick=document.forms.delete<?=$i?>.submit() style="color:red;">삭제</a><td>
 	  <input type="hidden" name="product_num" value="<?=$product_num?>"/>
 	  </form>

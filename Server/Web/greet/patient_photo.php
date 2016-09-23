@@ -130,7 +130,7 @@ for ($i=$start; $i<$start+$scale && $i < $total_record; $i++)
         <div id="page_num">
         <?php
 		$prepage=$page-1;
-        if($page!=$total_page)$prepage=$page-1; if($page>1)print"<a href='photo.php?table=photo&page=$prepage'>◀ 이전 &nbsp;&nbsp;&nbsp;&nbsp;</a>";
+        if($page!=$total_page)$prepage=$page-1; if($page>1)print"<a href='patient_photo.php?table=photo&page=$prepage'>◀ 이전 &nbsp;&nbsp;&nbsp;&nbsp;</a>";
  else print"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"; ?> 
         <?
            // 게시판 목록 하단에 페이지 링크 번호 출력
@@ -147,7 +147,7 @@ for ($i=$start; $i<$start+$scale && $i < $total_record; $i++)
                            }
 ?>      
       <?php $nextpage=$page+1;
-      if($page < $total_page)echo"<a href='photo.php?table=photo&page=$nextpage'>&nbsp;&nbsp;&nbsp;&nbsp;다음 ▶</a>";?>
+      if($page < $total_page)echo"<a href='patient_photo.php?table=photo&page=$nextpage'>&nbsp;&nbsp;&nbsp;&nbsp;다음 ▶</a>";?>
               </div>
 			  <?if($_SESSION['userlevel']<9)
 			  {?>

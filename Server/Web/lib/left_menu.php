@@ -21,12 +21,11 @@
 			 $s=$_SESSION['pname'];
 			 echo "<li style='text-align:center;font-size:20px;color:#6500FC;font-weight:900;'>$s 님</li>";
 				?>
-			<hr>		
+			<hr>	<li><a href="../greet/patient_info.php">환자정보</a></li>	
            <li><a href="../greet/patient_photo.php">의료사진</a></li>
             <li><a href="../greet/patient_graph.php">그래프</a></li>
              <li><a href="../greet/patient_alarm.php">약 알림 시간</a></li>
 				 <?}
 			 }
 			 ?>
-		</ul>
-			
+		</ul>		

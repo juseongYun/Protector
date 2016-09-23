@@ -2,9 +2,19 @@
 <meta charset="utf-8">
 <?
 
-	$userid=$_SESSION['userid'];
-
-	$product_num=$_SESSION['userproduct'];
+	if($_SESSION['userlevel'] == 5)
+	{
+		
+		$userid=$_SESSION['pid'];
+		$product_num=$_SESSION['patient'];	
+		$path='patient_alarm.php';
+	}
+	else
+	{
+		$userid=$_SESSION['userid'];
+		$product_num=$_SESSION['userproduct'];
+		$path='alarm.php';
+	}
 	$hour=$_POST['hour'];
 	$minute=$_POST['minute'];
 
@@ -36,11 +46,9 @@
 	}
 	mysql_close();                // DB 연결 끊기
 	echo($sql);
-	echo "
+	?>
 	   <script>
-	    location.href = 'alarm.php';
+	    location.href ='<?=$path?>'
 	   </script>
-	";
-?>
 
   

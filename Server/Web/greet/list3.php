@@ -264,7 +264,7 @@ function reset_form()
   <li><input type="text" class="address" name="address" value=<?=$row[address]?> ></li>
   <li style="height:77px;"><textarea rows="4" cols="73" class="medicine" name="medicine"  ><?=$row[medicine]?></textarea></li>
   <li style="height:121px;"><textarea rows="7" cols="73" class="medical_history" name="medical_history" ><?=$row[medical_history]?></textarea></li>
-  <li style="height:80px;"><textarea rows="6" cols="73" class="special" name="special" ><?=$row[special]?></textarea></li>
+  <li style="height:100px;"><textarea rows="6" cols="73" class="special" name="special" ><?=$row[special]?></textarea></li>
 </ul>
 </div>
 <div class="clear"</div>

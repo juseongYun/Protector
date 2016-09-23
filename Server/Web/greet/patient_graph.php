@@ -30,7 +30,7 @@ else{
     <?
   }
      $date = date("Y-m-d H:i",strtotime("-1 hours"));
-    $sql = "select * from graph where product_num ='$product' and date >= '$date'";
+    $sql = "select * from graph where product_num ='$userproduct' and date >= '$date'";
     $result =mysql_query($sql,$connect);
     $total_record = mysql_num_rows($result);
     $v="['시간', '체온','심박']";
