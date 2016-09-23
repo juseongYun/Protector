@@ -95,7 +95,7 @@ void loop() {
         {
           for(int j=0;j<3;j++)
           {
-             tone(buzer,1093,30);
+             tone(buzer,2703,30);
              delay(40);
           }
           delay(100);  
