@@ -12,19 +12,24 @@ void interruptSetup(){
   // Initializes Timer2 to throw an interrupt every 2mS.
   //8MHz = 8000000 =  625* 256 * 50
   TCCR1B = 0x04;     // DON'T FORCE COMPARE, 256 PRESCALER 
-  OCR1A = 0X271;      // SET THE TOP OF THE COUNT TO 249 FOR 500Hz SAMPLE RATE
+  OCR1A = 0X270;      // SET THE TOP OF THE COUNT TO 624 FOR 500Hz SAMPLE RATE
   TIMSK1 = 0x02;     // ENABLE INTERRUPT ON MATCH BETWEEN TIMER2 AND OCR2A
   attachInterrupt(0, danger, RISING);
   sei();             // MAKE SURE GLOBAL INTERRUPTS ARE ENABLED      
 } 
 
 
-// THIS IS THE TIMER 2 INTERRUPT SERVICE ROUTINE. 
-// Timer 2 makes sure that we take a reading every 2 miliseconds
-ISR(TIMER1_COMPA_vect){                         // triggered when Timer2 counts to 124
+// THIS IS THE TIMER 1 INTERRUPT SERVICE ROUTINE. 
+// Timer 1 makes sure that we take a reading every 20 miliseconds
+ISR(TIMER1_COMPA_vect){                         // triggered when Timer1 counts to 624
   // disable interrupts while we do this
   //cli();
   sei();
+  // triggered when Timer1 counts to 624
+sei();/*아두이노는 인터럽트시 자동으로 cli를하여 다른 인터럽트를 차단한다.
+이경우 다른 시그널 인터럽트들이 무시되어 문제가 발생할 수 있으므로 인터럽트를 enable시켜준다.
+*/
+
   Signal = analogRead(pulsePin);              // read the Pulse Sensor 
   sampleCounter += 20;                         // keep track of the time in mS with this variable
   int N = sampleCounter - lastBeatTime;       // monitor the time since the last beat to avoid noise
@@ -102,6 +107,7 @@ ISR(TIMER1_COMPA_vect){                         // triggered when Timer2 counts 
 
 void danger()
 {
+  sei();
   String msg = "I-"+(String)temp+"-"+(String)BPM+"& \n";
   Serial.println(msg);
   mysend(msg); 

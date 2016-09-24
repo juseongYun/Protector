@@ -32,8 +32,8 @@ double temp;
 void setup() {
   // put your setup code here, to run once:
     Serial.begin(9600);
-    pinMode(buzer, OUTPUT); // test
-    pinMode(13, OUTPUT); // test
+    pinMode(buzer, OUTPUT); // 약 알림 부저
+    pinMode(13, OUTPUT); // 응급상황 체크 led
     esp8266Serial.begin(9600);
     mlx.begin();
     wifi.begin();
@@ -91,15 +91,13 @@ void loop() {
         Serial.println((char*)buffer);
 
 
-        for(int i=0;i<3;i++)
+       
+        for(int j=0;j<3;j++)
         {
-          for(int j=0;j<3;j++)
-          {
-             tone(buzer,2703,30);
-             delay(40);
-          }
-          delay(100);  
-        }
+           tone(buzer,2903,300);
+           delay(500);
+        } 
+       
       }
   }
   if((millis()-startm) >=60000)
