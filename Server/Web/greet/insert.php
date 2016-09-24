@@ -1,4 +1,4 @@
-<? session_start(); ?>
+﻿<? session_start(); ?>
 <meta charset="utf-8">
 <?
 	$level=$_SESSION['userlevel'];
@@ -69,11 +69,11 @@
 		$sql .= "values('$name', '$medical_num', '$social_num', '$product_num', '$relative1', '$emergency_num1', '$relative2', '$emergency_num2', '$address', '$medicine', '$medical_history', '$special', '$regist_day')";
 	}
 
-	//mysql_query($sql, $connect);  // $sql 에 저장된 명령 실행
+	mysql_query($sql, $connect);  // $sql 에 저장된 명령 실행
 	mysql_close();                // DB 연결 끊기
 	echo($sql);?>
 	
 	   <script>
-	   // location.href = 'list.php?page=<?=$page?>';
+	    location.href = 'list.php?page=<?=$page?>';
 	   </script>
   
